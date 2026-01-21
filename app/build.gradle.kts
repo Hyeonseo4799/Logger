@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.skogkatt.logviewer"
+    namespace = "com.skogkatt.logger"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.skogkatt.logviewer"
-        minSdk = 24
+        applicationId = "com.skogkatt.logger"
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"

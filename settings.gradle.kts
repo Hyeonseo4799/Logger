@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LogViewer"
+rootProject.name = "Logger"
 include(":app")
-include(":logviewer")
+include(":logger")
 include(":sample")

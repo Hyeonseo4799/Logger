@@ -1,6 +1,7 @@
 package com.skogkatt.logviewer
 
 import android.util.Log
+import com.skogkatt.logger.BuildConfig
 import com.skogkatt.logviewer.util.currentTimestamp
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.skogkatt.logviewer"
+    namespace = "com.skogkatt.logger"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 26
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
