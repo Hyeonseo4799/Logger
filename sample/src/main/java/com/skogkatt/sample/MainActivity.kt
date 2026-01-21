@@ -1,5 +1,8 @@
 package com.skogkatt.sample
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,7 +32,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.skogkatt.logviewer.LogConfig
 import com.skogkatt.logviewer.LogLevel
-import com.skogkatt.logviewer.util.copyToClipboard
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,5 +96,11 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    fun Context.copyToClipboard(text: String) {
+        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        val clip = ClipData.newPlainText("label", text)
+        clipboard.setPrimaryClip(clip)
     }
 }
