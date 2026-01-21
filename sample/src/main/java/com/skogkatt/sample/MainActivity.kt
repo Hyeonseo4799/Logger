@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
             var searchText by remember { mutableStateOf("") }
 
             val entries by LogConfig.logEntryList.collectAsStateWithLifecycle()
-            val filtered by remember {
+            val filtered by remember(entries, searchText) {
                 derivedStateOf {
                     entries.filter {
                         it.level.name.contains(searchText, ignoreCase = true) ||
